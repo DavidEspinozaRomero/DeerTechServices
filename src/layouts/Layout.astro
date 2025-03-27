@@ -1,11 +1,16 @@
+---
+import Head from "../components/Head.astro";
+
+const { title, description, image } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
+		<!-- meta -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<Head title={title} description={description} image={image}/>
 	</head>
 	<body>
 		<slot />

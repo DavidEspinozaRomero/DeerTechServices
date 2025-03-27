@@ -1,0 +1,51 @@
+---
+let {
+  title = "Deer Tech Services",
+  description = "Servicios de Tecnología",
+  image = "",
+  OGTitle = "",
+  OGDescription = "",
+  OGImage = "",
+} = Astro.props;
+---
+
+<!-- title -->
+<title>{title}</title>
+<!-- preconect -->
+<!-- scripts async-->
+<!-- CSS includes @imports -->
+<!-- scripts syncronous-->
+<!-- scripts CSS-->
+<!-- preload-->
+<!-- scripts defer-->
+<!-- prefetch / prerender-->
+
+<meta name="description" content={description} />
+
+<!-- Evrything else (SEO, meta tags, icons, OpenGraph, etc) -->
+<meta
+  name="keywords"
+  content="Servicios TI, Tecnología, Ingeniería,  DeerTech Services"
+/>
+<meta name="author" content="Deerhou" />
+<!-- <meta name="application-name" content="DeerhouTechServices" /> -->
+<meta name="robots" content="noimageindex" />
+<meta name="generator" content="Astro" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:title" content={OGTitle ?? title} />
+<meta property="og:description" content={OGDescription ?? description} />
+<meta property="og:image" content={OGImage ?? image} />
+<meta property="og:url" content="https://deertechservices.netlify.com" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={OGTitle ?? title} />
+<meta name="twitter:description" content={OGDescription ?? description} />
+<meta property="twitter:domain" content="deertechservices.netlify.com" />
+<meta property="twitter:url" content="https://deertechservices.netlify.com" />
+<!-- <meta name="twitter:image" content="" /> -->
+<meta name="twitter:site" content="@DEERHOU" />
+<meta name="twitter:creator" content="@DEERHOU" />
