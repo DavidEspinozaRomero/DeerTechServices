@@ -1,9 +1,113 @@
 ---
 import "../styles/styles.css";
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout image="https://astro.build/social/banner.jpg">
-	<h1>Deer Tech Services</h1>
+	<!-- <h1>Deer Tech Services</h1> -->
+
+	<header class="bg-black shadow">
+		<div class="container mx-auto px-4 py-6 flex justify-between items-center">
+			<div class="text-2xl font-bold text-red-100">Deer Tech Services</div>
+			<nav>
+				<ul class="flex space-x-6">
+					<li><a href="#home" class="hover:text-red-100">Home</a></li>
+					<li>
+						<a href="#servicios" class="hover:text-red-100">Servicios</a>
+					</li>
+					<li><a href="#about" class="hover:text-red-100">About</a></li>
+					<li>
+						<a href="#portafolio" class="hover:text-red-100">Portafolio</a>
+					</li>
+					<li>
+						<a href="#contacto" class="hover:text-red-100">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<h1>
+			Soluciones tecnológicas a tu medida. Desarrollo, calidad y seguridad para
+			tus sistemas, con la experiencia de un profesional comprometido.
+		</h1>
+		<p>
+			En Deer Tech Services, diseñamos y desarrollamos software robusto,
+			eficiente y seguro. Desde interfaces intuitivas hasta arquitecturas
+			empresariales completas, ofrecemos un servicio personalizado para cada
+			necesidad.
+		</p>
+		<button>Solicita una Cotización</button>
+	</main>
+	<section class="services">
+		<h2>Tecnología que se adapta a ti.</h2>
+		<p>
+			Transforma tus ideas en soluciones reales con nuestros servicios
+			especializados.
+		</p>
+
+		<article>
+			<h3>Desarrollo Web</h3>
+			<p>
+				Interfaces modernas, rápidas y responsivas (celular, tablet, escritorio)
+				desarrolladas con Frameworks como Angular/Astro. Desarrollo y
+				mantenimiento de sitios web, aplicaciones web. Creamos experiencias
+				visuales intuitivas y eficientes que potencian la interacción con tu
+				plataforma.
+			</p>
+		</article>
+
+		<article>
+			<h3>Desarrollo de Software</h3>
+			<p>
+				Desarrollo de software, desarrollo de aplicaciones, integración de
+				sistemas.Desde la lógica de negocio hasta la presentación visual,
+				desarrollamos soluciones completas con NestJS, Node.js, Express y Bases
+				de datos SQL. Ideal para sistemas empresariales, plataformas
+				administrativas y proyectos personalizados.
+			</p>
+		</article>
+		<article>
+			<h3>Desarrollo y Migración de Sistemas Empresariales</h3>
+			<p>
+				Migraciones seguras, adaptamos y optimizamos tus sistemas o construimos
+				nuevos desde cero, adaptaciones inteligentes y enfoque en eficiencia
+				operativa, para mejorar la productividad y escalabilidad de tu negocio.
+			</p>
+		</article>
+
+		<article>
+			<h3>Consultoría en Seguridad</h3>
+			<p>
+				Protege tus datos y los de tus usuarios. Desde la identificación de
+				vulnerabilidades hasta la implementación de soluciones de seguridad,
+				brindamos un servicio personalizado para cada necesidad.
+			</p>
+		</article>
+
+		<article>
+			<h3>Generación de Reportes y Análisis Financiero</h3>
+			<p>
+				Desarrollamos herramientas que convierten tus datos en decisiones.
+				Dashboards y reportes automáticos personalizados para ayudarte a
+				visualizar tu información financiera con claridad.
+			</p>
+		</article>
+		<article>
+			<h3>Consultoría en Tecnología</h3>
+			<p>
+				Desde la identificación de problemas hasta la implementación de
+				soluciones tecnológicas, brindamos un servicio personalizado para cada
+				necesidad.
+			</p>
+		</article>
+	</section>
+
+	<section id="sobre-mi">
+    <h2>Conoce al Profesional Detrás de Deer Tech Services</h2>
+    <p><strong>David Emanuel Espinoza Romero</strong> es desarrollador frontend y fullstack con más de 3 años de experiencia. Ha trabajado en proyectos financieros, educativos y empresariales, combinando habilidades técnicas con una visión estratégica.</p>
+    <a href="https://linkedin.com/in/david-emanuel-espinoza-romero-deerhou" target="_blank">Ver perfil en LinkedIn</a>
+  </section>
+
 </Layout>
