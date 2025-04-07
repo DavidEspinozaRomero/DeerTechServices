@@ -1,7 +1,7 @@
 ---
 let {
-  title = "Deer Tech Services",
-  description = "Servicios de Tecnología",
+  title = "Desarrollo Web y Servicios Tecnológicos | Deer Tech Services",
+  description = "Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida.",
   image = "",
   OGTitle = "",
   OGDescription = "",
@@ -34,18 +34,18 @@ let {
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 <!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://deertechservices.netlify.com" />
+<meta property="og:type" content="website" />
 <meta property="og:title" content={OGTitle ?? title} />
 <meta property="og:description" content={OGDescription ?? description} />
 <meta property="og:image" content={OGImage ?? image} />
-<meta property="og:url" content="https://deertechservices.netlify.com" />
-<meta property="og:type" content="website" />
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={OGTitle ?? title} />
-<meta name="twitter:description" content={OGDescription ?? description} />
 <meta property="twitter:domain" content="deertechservices.netlify.com" />
 <meta property="twitter:url" content="https://deertechservices.netlify.com" />
-<!-- <meta name="twitter:image" content="" /> -->
+<meta name="twitter:title" content={OGTitle ?? title} />
+<meta name="twitter:description" content={OGDescription ?? description} />
+<meta name="twitter:image" content={OGImage ?? image} />
 <meta name="twitter:site" content="@DEERHOU" />
 <meta name="twitter:creator" content="@DEERHOU" />
