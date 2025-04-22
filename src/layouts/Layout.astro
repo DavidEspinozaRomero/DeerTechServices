@@ -1,4 +1,5 @@
 ---
+import AsideNav from "../components/Aside-Nav.astro";
 import Head from "../components/Head.astro";
 
 const { title, description, image } = Astro.props;
@@ -13,14 +14,8 @@ const { title, description, image } = Astro.props;
 		<Head title={title} description={description} image={image}/>
 	</head>
 	<body class="bg-neutral-950 text-slate-200">
+		<AsideNav />
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		box-sizing: border-box;
-	}
-</style>
