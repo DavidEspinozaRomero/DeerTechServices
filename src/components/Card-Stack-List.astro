@@ -1,0 +1,192 @@
+---
+import { Image } from "astro:assets";
+import type { CardProps } from "../interfaces/cardProps";
+import deer from "../assets/photos/david_e.jpg";
+import ivi from "../assets/photos/ivieduca.png";
+
+const {
+  cards = [
+    {
+      title: "TravelToSpace",
+      href: "https://travelto-space.netlify.app/",
+      date: "08-2024 / 10-2024",
+      author: "David Espinoza Romero",
+      prefix: "Frontend Developer",
+      photo: deer,
+      badges: [
+        "Es6",
+        "Typescript",
+        "Astro",
+        "Static Site Generator",
+        "Scss",
+        "Design System",
+      ],
+    },
+    {
+      title: "Endless Runner Dog Game",
+      href: "https://endlessrunnerdog.netlify.app",
+      date: "02-2024 / 03-2024",
+      author: "David Espinoza Romero",
+      prefix: "Game Developer",
+      photo: deer,
+      badges: ["Es6", "Typescript", "Rxjs", "Angular"],
+    },
+    {
+      title: "IVI Educa",
+      href: "https://ivieduca.com",
+      date: "08-2021 / 12-2022",
+      author: "Vinary Technology",
+      prefix: "TI Company",
+      photo: ivi,
+      badges: [
+        "Es6",
+        "Typescript",
+        "Rxjs",
+        "Bootstrap",
+        "Ngx-Bootstrap",
+        "Chart.js",
+        "Angular",
+      ],
+    },
+    {
+      title: "WhatsApp Bot",
+      href: "https://wwbot.netlify.app",
+      date: "06-2022 / 01-2023",
+      author: "David Espinoza Romero",
+      prefix: "Frontend Developer",
+      photo: deer,
+      badges: [
+        "Es6",
+        "Typescript",
+        "Rxjs",
+        "Bootstrap",
+        "Angular",
+        "Jest",
+        "Testing-Library",
+        "Postgress",
+        "TypeORM",
+        "Nest.js",
+      ],
+    },
+    {
+      title: "Lilia's Bordados",
+      href: "https://liliasbordados.netlify.app",
+      date: "03-2023 / 04-2023",
+      author: "Lilia Artheaga",
+      prefix: "Modista",
+      photo: "",
+      badges: ["Es6", "Bootstrap", "Sass", "Angular"],
+    },
+  ],
+} = Astro.props;
+---
+
+<section class="flex overflow-x-hidden h-full p-16">
+  {
+    cards.map((card: CardProps) => (
+      <article
+        class="card-stack text-white h-90 min-w-80 w-96 p-6 flex flex-col relative rounded-2xl bg-gray-900 transition duration-300 
+    "
+      >
+        <header class="">
+          <p>08-2024 / 10-2024</p>
+          <h2 class="text-2xl hover:bg-clip-text hover:text-transparent hover:bg-linear-to-r from-amber-500 to-rose-600">
+            <a href={card.href} target="_blank" rel="noopener noreferrer">
+              {card.title}
+            </a>
+          </h2>
+        </header>
+        <div class="card-stack-author relative grid items-center my-12 grid-cols-2 gap-x-4">
+          {/* <Image width=40 height=40 src={card.photo ?? "https://randomuser.me/api/portraits/women/31.jpg"} alt="author avatar" class="w-10 h-10 rounded-full grayscale-100 my-4 mx-2.5" alt="author avatar" 
+              class="w-10 h-10 rounded-full grayscale-100 my-4 mx-2.5"></Image> */}
+          <img
+            src={
+              card.photo?.src ??
+              "https://randomuser.me/api/portraits/women/31.jpg"
+            }
+            alt="author avatar"
+            class="w-10 h-10 rounded-full grayscale-100 my-4 mx-2.5 "
+          />
+          <svg
+            class="half-circle absolute bottom-0 left-0 w-[60px] h-12 fill-none stroke-rose-600 stroke-[8] "
+            viewBox="0 0 106 57"
+          >
+            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4" />
+          </svg>
+          <div>
+            <div class="font-bold text-gray-500">{card.prefix}</div>
+            {card.author}
+          </div>
+        </div>
+
+        <div class="mt-auto">
+          {card.badges.map((badge, index) => (
+            <small class="inline-block py-1 px-1.5 mr-[0.1em] text-[0.75em] font-bold bg-gray-400 rounded-sm">
+              {badge}
+            </small>
+          ))}
+        </div>
+      </article>
+    ))
+  }
+</section>
+
+<style>
+  /* needs a cotainer whit background-color: black; */
+
+  .card-stack-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: hidden;
+    scrollbar-width: 10px;
+    scrollbar-color:
+      inset 2px 2px 2px hsla(0deg, 0%, 100%, 0.25%),
+      inset -2px -2px 2px hsla(0deg, 0%, 0%, 0.25%);
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #201c29;
+      border-radius: 10px;
+      box-shadow:
+        inset 2px 2px 2px hsla(0deg, 0%, 100%, 0.25%),
+        inset -2px -2px 2px hsla(0deg, 0%, 0%, 0.25%);
+    }
+    &::-webkit-scrollbar-track {
+      background: linear-gradient(
+        90deg,
+        #201c29,
+        #201c29 1px,
+        #17141d 0,
+        #17141d
+      );
+    }
+  }
+
+  .card-stack {
+    box-shadow: -1rem 0 3rem #000;
+
+    &:hover {
+      transform: translateY(-1rem);
+
+      & ~ .card-stack {
+        transform: translateX(130px);
+      }
+    }
+
+    &:not(:first-child) {
+      margin-left: -130px;
+    }
+  }
+
+  .card-stack-author {
+    grid-template-columns: 75px 1fr;
+  }
+
+  .half-circle {
+    stroke-linecap: round;
+  }
+</style>
