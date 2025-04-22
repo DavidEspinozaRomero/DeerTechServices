@@ -1,1 +1,99 @@
 @import "tailwindcss";
+
+
+
+
+/* animations */
+/* ***** */
+@theme {
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  --animate-rainbow-text: rainbow-text 1s ease-in-out infinite;
+
+  @keyframes rainbow-text {
+
+    0%,
+    100% {
+      background-image: linear-gradient(to left, blue,); 
+    }
+
+    50% {
+      background-image: linear-gradient(to left, red, blue); 
+    }
+  }
+}
+
+
+/* reset */
+/* ***** */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  hanging-punctuation: first last;
+  /* Allow the use of first and last punctuation marks in headings */
+}
+
+body {
+  margin: 0;
+  /* Remove the tiny space around the edge of the page */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  max-width: 70ch;
+  text-wrap: pretty;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+/* body> :is(header, footer), main,
+section,
+article {
+  container-type: inline-size;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  html,
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+
+}
