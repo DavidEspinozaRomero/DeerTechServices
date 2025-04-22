@@ -1,0 +1,17 @@
+---
+import "../styles/styles.css";
+const {
+  href = "#",
+  icon = "bi bi-whatsapp",
+  hoverColor = "group-hover:text-emerald-600",
+} = Astro.props;
+---
+
+<a
+  href={href}
+  class="inline-grid place-items-center p-2 aspect-square rounded-full text-gray-300
+bg-white/10 shadow-lg hover:bg-white transition-colors duration-300 ease-in-out
+group"
+>
+  <i class:list={["grid text-xl transition-colors", icon, hoverColor]}></i>
+</a>
