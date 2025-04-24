@@ -46,3 +46,8 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+<!-- lighthouse -->
+npx unlighthouse --site https://deertechservices.netlify.com
+npx unlighthouse --site https://deertechservices.netlify.com --strategy=lighthouse:performance --chromeFlags="--headless --no-sandbox --disable-gpu" --output=json --quiet
