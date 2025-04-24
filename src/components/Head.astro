@@ -1,6 +1,4 @@
 ---
-
-
 let {
   title = "Desarrollo Web y Servicios Tecnológicos | Deer Tech Services",
   description = "Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida.",
@@ -10,21 +8,30 @@ let {
   OGImage = "",
 } = Astro.props;
 ---
+
 <!-- title -->
 <title>{title}</title>
 <!-- preconect -->
 <!-- scripts async-->
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="sASfd12IOBxOqgA/S0QsDQ" async></script>
+<script
+  src="https://analytics.ahrefs.com/analytics.js"
+  data-key="sASfd12IOBxOqgA/S0QsDQ"
+  async></script>
 <!-- CSS includes @imports -->
 <!-- scripts syncronous-->
 <!-- scripts CSS-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"  />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
 <!-- preload-->
 <!-- scripts defer-->
 <!-- prefetch / prerender-->
 
 <meta name="description" content={description} />
 
+<!-- robots -->
+<meta name="robots" content="index,follow" />
 <!-- Evrything else (SEO, meta tags, icons, OpenGraph, etc) -->
 <meta
   name="keywords"
@@ -41,7 +48,10 @@ let {
 <meta property="og:type" content="website" />
 <meta property="og:title" content={OGTitle ?? title} />
 <meta property="og:description" content={OGDescription ?? description} />
-<meta property="og:image" content="https://deertechservices.netlify.app/heroWeb.webp" />
+<meta
+  property="og:image"
+  content="https://deertechservices.netlify.app/heroWeb.webp"
+/>
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -49,6 +59,9 @@ let {
 <meta property="twitter:url" content="https://deertechservices.netlify.com" />
 <meta name="twitter:title" content={OGTitle ?? title} />
 <meta name="twitter:description" content={OGDescription ?? description} />
-<meta name="twitter:image" content="https://deertechservices.netlify.app/heroWeb.webp" />
+<meta
+  name="twitter:image"
+  content="https://deertechservices.netlify.app/heroWeb.webp"
+/>
 <meta name="twitter:site" content="@DEERHOU" />
 <meta name="twitter:creator" content="@DEERHOU" />
