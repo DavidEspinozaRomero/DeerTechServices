@@ -7,52 +7,53 @@ import Header from "../components/Header.astro";
 const services = [
 	{
 		title: "Desarrollo Web",
-		img: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+		img: "/imgs/frames-design.webp",
 		description:
 			"Interfaces modernas, rápidas y responsivas. Utilizamos IA para automatizar pruebas visuales, validar accesibilidad y sugerir mejoras de UX/UI. Creamos experiencias visuales intuitivas y eficientes que potencian la interacción con tu plataforma.",
 	},
 	{
 		title: "Desarrollo de Software",
-		img: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+		img: "/imgs/desarrollo-software.webp",
 		description:
 			"Desarrollo de aplicaciones, integración de sistemas. desarrollamos soluciones completas. Aplicamos inteligencia artificial para detectar cuellos de botella, sugerir mejoras estructurales y garantizar que tu sistema sea robusto, escalable y alineado con los objetivos de negocio",
 	},
 	{
 		title: "Desarrollo y Migración de Sistemas Empresariales",
-		img: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+		img: "/imgs/empresas.webp",
 		description:
 			"Migraciones seguras, adaptamos y optimizamos tus sistemas o construimos nuevos desde cero. Con ayuda de IA, analizamos estructuras existentes, identificamos riesgos y proponemos soluciones eficaces para una migración segura y un rendimiento superior.",
 	},
 	{
 		title: "Consultoría en Seguridad",
-		img: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+		img: "/imgs/consultor-seguridad.webp",
 		description:
 			"Protege tus datos y los de tus usuarios. Desde la identificación de vulnerabilidades hasta la implementación de soluciones de seguridad, brindamos un servicio personalizado para cada necesidad.",
 	},
 	{
 		title: "Generación de Reportes",
-		img: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+		img: "/imgs/charts01.webp",
 		description:
 			"Desarrollamos herramientas que convierten tus datos en decisiones. Dashboards y reportes automáticos potenciados con inteligencia artificial para detectar tendencias, generar alertas inteligentes y ayudarte a visualizar tu información financiera con claridad.",
 	},
 	{
 		title: "Consultoría en Tecnología",
-		img: "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+		img: "/imgs/consultor-tech.webp",
 		description:
 			"Desde la identificación de problemas hasta la implementación de soluciones tecnológicas, brindamos un servicio personalizado para cada necesidad. Utilizamos IA para detectar vulnerabilidades y fortalecer la seguridad desde el código.",
 	},
 ];
 ---
 
-<!-- img de posible fondo --><!-- https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 -->
 <Layout
-	image="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+	image="/imgs/logo.webp"
 	title="Desarrollo Web y Servicios Tecnológicos | Deer Tech Services"
 	description="Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida."
 >
-<Header />
+<Header></Header>
 
-	<main class="grid lg:grid-cols-2 my-5 bg-black/40 p-4 lg:place-items-center">
+<div class="wrapper px-4">
+
+	<main class="grid lg:grid-cols-2 my-5 p-4 lg:gap-4 bg-black/40  lg:place-items-center">
 		<div>
 			<h1 class="text-2xl mb-4">
 				<strong class="text-4xl">Soluciones tecnológicas a tu medida.</strong>
@@ -75,9 +76,9 @@ const services = [
 			</div>
 		</div>
 		<img
-			src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+			src="/imgs/main.webp"
 			alt="background image of setup"
-			class="object-cover"
+			class="object-cover aspect-video rounded-lg"
 		/>
 	</main>
 
@@ -94,8 +95,9 @@ const services = [
 			buscadores.
 		</p>
 	</div>
+
 	<section id="servicios" class="services my-5">
-		<div class="grid grid-cols-3 gap-4 max-w-7xl mx-auto my-5">
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto my-5">
 			{
 				services.map(({ title, img, description }) => (
 					<article class="bg-gray-900 shadow-lg rounded-2xl">
@@ -104,7 +106,7 @@ const services = [
 							alt="card image"
 							width="400"
 							height="300"
-							class="object-cover rounded-t-xl w-full aspect-auto"
+							class="object-cover rounded-t-xl w-full aspect-video"
 						/>
 						<div class="p-4">
 							<h3 class="text-xl font-bold bg-linear-to-r to-blue-600 from-indigo-400 bg-clip-text text-transparent">
@@ -131,9 +133,10 @@ const services = [
 			mejores prácticas de desarrollo, usabilidad y posicionamiento SEO.
 		</p>
 	</div>
+
 	<section class="proyects my-5">
 		<h2 class="text-2xl ml-8">
-			<i class="bi bi-code-slash mr-4"></i>Proyectos
+			<i class="bi bi-code-slash mr-4"></i> Proyectos
 		</h2>
 		<CardStackList />
 	</section>
@@ -205,6 +208,7 @@ const services = [
 			más pulidas, rápidas y optimizadas para buscadores (SEO).
 		</p>
 	</section>
+</div>
 </Layout>
 
 <style>
