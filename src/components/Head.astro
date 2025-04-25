@@ -1,67 +1,12 @@
----
-let {
-  title = "Desarrollo Web y Servicios Tecnológicos | Deer Tech Services",
-  description = "Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida.",
-  image = "https://deertechservices.netlify.app/heroWeb.webp",
-  OGTitle = "",
-  OGDescription = "",
-  OGImage = "",
-} = Astro.props;
----
 
-<!-- title -->
-<title>{title}</title>
-<!-- preconect -->
-<!-- scripts async-->
-<script
-  src="https://analytics.ahrefs.com/analytics.js"
-  data-key="sASfd12IOBxOqgA/S0QsDQ"
-  async></script>
-<!-- CSS includes @imports -->
-<!-- scripts syncronous-->
-<!-- scripts CSS-->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-/>
-<!-- preload-->
-<!-- scripts defer-->
-<!-- prefetch / prerender-->
 
-<meta name="description" content={description} />
-
-<!-- robots -->
-<meta name="robots" content="index,follow" />
-<!-- Evrything else (SEO, meta tags, icons, OpenGraph, etc) -->
 <meta
   name="keywords"
   content="Deer Tech Services,servicios IT, soluciones tecnológicas, consultoría IT, desarrollo de software, desarrollo de paginas web,desarrollo de sitios web, servicios web, servicios de tecnología, desarrollo web, desarrollo de aplicaciones web, desarrollo de sitios web,web development services, web development consulting, web development solutions, web development company, web development agency"
 />
 <meta name="author" content="Deerhou" />
-<!-- <meta name="application-name" content="DeerhouTechServices" /> -->
-<!-- <meta name="robots" content="noimageindex" /> -->
+<meta name="application-name" content="DeerhouTechServices" />
 <meta name="generator" content="Astro" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/favicon-200x200.png" />
 
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://deertechservices.netlify.com" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content={OGTitle ?? title} />
-<meta property="og:description" content={OGDescription ?? description} />
-<meta
-  property="og:image"
-  content="https://deertechservices.netlify.app/heroWeb.webp"
-/>
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:domain" content="deertechservices.netlify.com" />
-<meta property="twitter:url" content="https://deertechservices.netlify.com" />
-<meta name="twitter:title" content={OGTitle ?? title} />
-<meta name="twitter:description" content={OGDescription ?? description} />
-<meta
-  name="twitter:image"
-  content="https://deertechservices.netlify.app/heroWeb.webp"
-/>
-<meta name="twitter:site" content="@DEERHOU" />
-<meta name="twitter:creator" content="@DEERHOU" />
