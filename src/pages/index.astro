@@ -2,6 +2,7 @@
 import "../styles/styles.css";
 import Layout from "../layouts/Layout.astro";
 import CardStackList from "../components/Card-Stack-List.astro";
+import Header from "../components/Header.astro";
 
 const services = [
 	{
@@ -49,34 +50,7 @@ const services = [
 	title="Desarrollo Web y Servicios Tecnológicos | Deer Tech Services"
 	description="Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida."
 >
-	<header class="bg-black/90 shadow">
-		<div class="container mx-auto px-4 py-6 flex justify-between items-center">
-			<div class="">
-				<a href="#">
-					<span class="sr-only">DeerTechServices</span>
-					<img
-						src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-						alt="DeerTechServices logo"
-						class="h-8 w-auto"
-					/>
-				</a>
-			</div>
-			<nav>
-				<ul class="flex space-x-6">
-					<li>
-						<a href="#servicios" class="hover:text-red-100">Servicios</a>
-					</li>
-					<li><a href="#about" class="hover:text-red-100">About</a></li>
-					<li>
-						<a href="#portafolio" class="hover:text-red-100">Portafolio</a>
-					</li>
-					<li>
-						<a href="#contacto" class="hover:text-red-100">Contacto</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+<Header />
 
 	<main class="grid lg:grid-cols-2 my-5 bg-black/40 p-4 lg:place-items-center">
 		<div>
@@ -107,19 +81,6 @@ const services = [
 		/>
 	</main>
 
-	<!-- <section
-		class="my-5 bg-linear-30 to-blue-300 from-indigo-300 bg-clip-text text-transparent"
-	>
-		<p class="text-xl text-center mx-auto max-w-4xl">
-			En <em>Deer Tech Services</em>, diseñamos y desarrollamos software
-			robusto, eficiente y seguro.
-			<br />
-
-			Incorporamos herramientas de inteligencia artificial para optimizar
-			procesos, mejorar resultados y asegurar un enfoque alineado con las
-			mejores prácticas de desarrollo, usabilidad y posicionamiento SEO.
-		</p>
-	</section> -->
 	<div class="max-w-3xl mx-auto text-center py-30">
 		<h2
 			class="text-2xl bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
@@ -157,6 +118,19 @@ const services = [
 		</div>
 	</section>
 
+	<div class="max-w-3xl mx-auto text-center py-30">
+		<h2
+			class="text-2xl bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
+		>
+		En <em>Deer Tech Services</em>, diseñamos y desarrollamos software
+		robusto, eficiente y seguro.
+		</h2>
+		<p class="text-xl">
+			Incorporamos herramientas de inteligencia artificial para optimizar
+			procesos, mejorar resultados y asegurar un enfoque alineado con las
+			mejores prácticas de desarrollo, usabilidad y posicionamiento SEO.
+		</p>
+	</div>
 	<section class="proyects my-5">
 		<h2 class="text-2xl ml-8">
 			<i class="bi bi-code-slash mr-4"></i>Proyectos
