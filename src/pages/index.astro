@@ -96,8 +96,8 @@ import {testimonios} from "../assets/data/testimonials.ts";
 			</div>
 		</section>
 
-		<section id="testimonios" class="testimonials scroller my-20 overflow-hidden ">
-			<div class="scroller__inner w-max flex animate-scroll-horizontal">
+		<section id="testimonios" class="testimonials scroller my-20 overflow-hidden">
+			<div class="scroller__inner w-max flex animate-scroll-horizontal ">
 
 			{
 				[...testimonios, testimonios[0],testimonios[1]].map(({ img, title, subtitle, description }) => (
@@ -223,6 +223,11 @@ import {testimonios} from "../assets/data/testimonials.ts";
 </Layout>
 
 <style>
+/* testimonios scroller */
+.scroller {
+	mask: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+}
+
 	/* .whatsappLink.mobile {
 		display: none;
 	}
