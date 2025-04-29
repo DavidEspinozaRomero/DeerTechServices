@@ -1,0 +1,14 @@
+---
+import "../styles/styles.css";
+
+const { href = "#" } = Astro.props;
+---
+
+<a href={href} target="_blank">
+  <button
+    class="cursor-pointer px-4 py-2 my-4 bg-linear-to-r to-blue-600 from-indigo-600 rounded-2xl shadow
+animate-pulse hover:animate-none"
+  >
+    <slot />
+  </button>
+</a>
