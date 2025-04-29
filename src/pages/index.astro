@@ -3,6 +3,8 @@ import "../styles/styles.css";
 import Layout from "../layouts/Layout.astro";
 import CardStackList from "../components/Card-Stack-List.astro";
 import Header from "../components/Header.astro";
+import BtnCallToAction from "../components/Btn-call-to-action.astro";
+import Footer from "../components/Footer.astro";
 
 const services = [
 	{
@@ -49,166 +51,192 @@ const services = [
 	title="Desarrollo Web y Servicios Tecnológicos | Deer Tech Services"
 	description="Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida."
 >
-<Header></Header>
+	<Header />
 
-<div class="wrapper px-4">
-
-	<main class="grid lg:grid-cols-2 my-5 p-4 lg:gap-4 bg-black/40  lg:place-items-center">
-		<div>
-			<h1 class="text-2xl mb-4">
-				<strong class="text-4xl">Soluciones tecnológicas a tu medida.</strong>
-				<br />
-				<br />
-				Desarrollo, calidad y seguridad para tus sistemas, con inteligencia artificial
-				y respaldo de un profesional para una ejecución más rápida y precisa.
-			</h1>
-			<div class="">
-				<button
-					class="btn btn-primary px-4 py-2 my-4 bg-linear-to-r to-blue-600 from-indigo-600 rounded-2xl shadow
-				animate-pulse hover:animate-none"
-					>Ver Servicios</button
-				>
-				<button
-					class="btn btn-primary px-4 py-2 my-4 mx-2 bg-linear-to-r to-blue-600 from-indigo-600 rounded-2xl shadow
-					animate-pulse hover:animate-none"
-					>Conversemos</button
-				>
+	<div class="wrapper px-4">
+		<main
+			class="grid lg:grid-cols-2 my-5 p-4 lg:gap-4 bg-black/40 lg:place-items-center"
+		>
+			<div>
+				<h1 class="text-2xl mb-4">
+					<strong class="text-4xl">Soluciones tecnológicas a tu medida.</strong>
+					<br />
+					<br />
+					Desarrollo, calidad y seguridad para tus sistemas, con inteligencia artificial
+					y respaldo de un profesional para una ejecución más rápida y precisa.
+				</h1>
+				<div class="">
+					<BtnCallToAction href="#servicios">Ver Servicios</BtnCallToAction>
+					<BtnCallToAction href="/contacto">Conversemos</BtnCallToAction>
+				</div>
 			</div>
+			<img
+				src="/imgs/main.webp"
+				alt="background image of setup"
+				class="object-cover aspect-video rounded-lg"
+			/>
+		</main>
+
+		<div class="max-w-3xl mx-auto my-30">
+			<h2
+				class="mb-4 text-2xl bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
+			>
+				Mereces un servicio tecnológico que entienda tu negocio.
+			</h2>
+			<ol class="list-disc list-inside text-lg text-left">
+				<li class="p-2 mb-2 rounded-sm shadow-md shadow-gray-800">
+					<strong class="">Atención personalizada:</strong> Trabajas directamente
+					conmigo, no con equipos impersonales.
+				</li>
+				<li class="p-2 mb-4 rounded-sm shadow-md shadow-gray-800">
+					<strong>Experiencia comprobada:</strong> Desde 2019 entregando proyectos
+					en sectores financiero y educativo.
+				</li>
+				<li class="p-2 mb-4 rounded-sm shadow-md shadow-gray-800">
+					<strong>Cobertura integral:</strong> Desde interfaces modernas hasta consultoría
+					de seguridad y análisis de datos.
+				</li>
+				<li class="p-2 mb-4 rounded-sm shadow-md shadow-gray-800">
+					<strong>Calidad garantizada:</strong> Pruebas automatizadas que aseguran
+					software libre de errores.
+				</li>
+			</ol>
 		</div>
-		<img
-			src="/imgs/main.webp"
-			alt="background image of setup"
-			class="object-cover aspect-video rounded-lg"
-		/>
-	</main>
 
-	<div class="max-w-3xl mx-auto text-center py-30">
-		<h2
-			class="text-2xl bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
-		>
-			Tecnología que se adapta a ti.
-		</h2>
-		<p class="text-xl">
-			Transforma tus ideas en soluciones reales con nuestros servicios
-			especializados, potenciados con inteligencia artificial para acelerar el
-			desarrollo, mejorar la calidad del producto y optimizar su visibilidad en
-			buscadores.
-		</p>
-	</div>
+		<section id="servicios" class="services my-5">
+			<div
+				class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto my-5"
+			>
+				{
+					services.map(({ title, img, description }) => (
+						<article class="bg-gray-900 shadow-lg rounded-2xl">
+							<img
+								src={img}
+								alt="card image"
+								width="400"
+								height="300"
+								class="object-cover rounded-t-xl w-full aspect-video"
+							/>
+							<div class="p-4">
+								<h3 class="text-xl font-bold bg-linear-to-r to-blue-600 from-indigo-400 bg-clip-text text-transparent">
+									{title}
+								</h3>
+								<p class="">{description}</p>
+							</div>
+						</article>
+					))
+				}
+			</div>
+		</section>
 
-	<section id="servicios" class="services my-5">
-		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto my-5">
-			{
-				services.map(({ title, img, description }) => (
-					<article class="bg-gray-900 shadow-lg rounded-2xl">
-						<img
-							src={img}
-							alt="card image"
-							width="400"
-							height="300"
-							class="object-cover rounded-t-xl w-full aspect-video"
-						/>
-						<div class="p-4">
-							<h3 class="text-xl font-bold bg-linear-to-r to-blue-600 from-indigo-400 bg-clip-text text-transparent">
-								{title}
-							</h3>
-							<p class="">{description}</p>
-						</div>
-					</article>
-				))
-			}
+		<!-- <section id="testimonios" class="testimonios my-5"></section> -->
+
+		<div class="max-w-3xl mx-auto text-center my-30">
+			<h2
+				class="text-2xl bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
+			>
+				Tecnología que se adapta a ti.
+			</h2>
+			<p class="text-xl">
+				Transforma tus ideas en soluciones reales con nuestros servicios
+				especializados, potenciados con inteligencia artificial para acelerar el
+				desarrollo, mejorar la calidad del producto y optimizar su visibilidad
+				en buscadores.
+			</p>
+			<BtnCallToAction href="/contacto">Conversemos</BtnCallToAction>
 		</div>
-	</section>
 
-	<div class="max-w-3xl mx-auto text-center py-30">
-		<h2
-			class="text-2xl bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
-		>
-		En <em>Deer Tech Services</em>, diseñamos y desarrollamos software
-		robusto, eficiente y seguro.
-		</h2>
-		<p class="text-xl">
-			Incorporamos herramientas de inteligencia artificial para optimizar
-			procesos, mejorar resultados y asegurar un enfoque alineado con las
-			mejores prácticas de desarrollo, usabilidad y posicionamiento SEO.
-		</p>
+		<section class="proyects my-5">
+			<h2 class="text-2xl ml-8">
+				<i class="bi bi-code-slash mr-4"></i> Proyectos
+			</h2>
+			<CardStackList />
+		</section>
+		<div class="max-w-3xl mx-auto text-center my-30">
+			<h2
+				class="text-2xl bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
+			>
+				En <em>Deer Tech Services</em>, diseñamos y desarrollamos software
+				robusto, eficiente y seguro.
+			</h2>
+			<p class="text-xl">
+				Incorporamos herramientas de inteligencia artificial para optimizar
+				procesos, mejorar resultados y asegurar un enfoque alineado con las
+				mejores prácticas de desarrollo, usabilidad y posicionamiento SEO.
+			</p>
+			<BtnCallToAction href="/contacto">Conversemos</BtnCallToAction>
+		</div>
 	</div>
-
-	<section class="proyects my-5">
-		<h2 class="text-2xl ml-8">
-			<i class="bi bi-code-slash mr-4"></i> Proyectos
-		</h2>
-		<CardStackList />
-	</section>
-
-	<section
-		id="sobre-mi"
-		class="p-8 max-w-3xl mx-auto my-5 shadow-lg shadow-gray-800"
-	>
-		<h2
-			class="bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
-		>
-			<strong class="text-2xl">David Emanuel Espinoza Romero</strong>
-			<br />
-			<em>Desarrollador Web Fullstack</em> -
-			<small>
-				C# | .Net | Typescript | Astro | Angular | Testing | Nest.js | Node |
-				Postgres | SQL
-			</small>
-		</h2>
-
-		<!-- <div class="my-4">
-			<a
-				href="https://linkedin.com/in/david-emanuel-espinoza-romero-deerhou"
-				target="_blank"
-				class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-500 hover:text-blue-500
-				transition-colors duration-200 ease-in-out"
+<Footer></Footer>
+	<!-- <section
+				id="sobre-mi"
+				class="p-8 max-w-3xl mx-auto my-5 shadow-lg shadow-gray-800"
 			>
-				<i class="bi bi-linkedin"></i>
-				<span class="sr-only">Ver perfil en LinkedIn</span>
-			</a>
-
-			<a
-				href="https://facebook.com/deerhou"
-				target="_blank"
-				class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-lg hover:text-blue-600 text-white
-				transition-colors duration-200 ease-in-out"
-			>
-				<i class="bi bi-facebook"></i>
-				<span class="sr-only">Ver perfil en Facebook</span>
-			</a>
-
-			<a
-				href="mailto:deerhou@gmail.com"
-				class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-lg hover:text-lime-500 text-white
-				transition-colors duration-200 ease-in-out"
-			>
-				<i class="bi bi-envelope"></i>
-				<span class="sr-only">deerhou@gmail.com</span>
-			</a>
-
-			<a
-				aria-label="Chat on WhatsApp"
-				href="https://wa.me/+5939344904?text=Hola!%20Me%20interesa%20tu%20servicio%20conversemos"
-				class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-lg hover:text-emerald-600 text-white
-				transition-colors duration-200 ease-in-out"
-			>
-				<i class="bi bi-whatsapp"></i>
-				<span class="sr-only">Chat on WhatsApp</span>
-			</a>
-		</div> -->
-		<!-- <a class="whatsappLink mobile" href="whatsapp://send?text=Tu mensaje&phone=+34123456789&abid=+34123456789"></a>
-<a class="whatsappLink desktop" href="http://web.whatsapp.com/send?text=Tu mensaje&phone=+34123456789&abid=+34123456789"></a> -->
-		<p class="text-xl mt-4">
-			Sirviendo desde 2019, trabajado tanto de forma independiente como en
-			empresas tecnológicas. Me dedico a crear soluciones sólidas, escalables y
-			seguras, priorizando siempre la calidad del código y la satisfacción del
-			cliente. Integro inteligencia artificial en mis procesos para trabajar de
-			forma más ágil, predecir problemas antes de que ocurran y ofrecer entregas
-			más pulidas, rápidas y optimizadas para buscadores (SEO).
-		</p>
-	</section>
-</div>
+				<h2
+					class="bg-linear-to-r to-blue-400 from-indigo-400 bg-clip-text text-transparent"
+				>
+					<strong class="text-2xl">David Emanuel Espinoza Romero</strong>
+					<br />
+					<em>Desarrollador Web Fullstack</em> -
+					<small>
+						C# | .Net | Typescript | Astro | Angular | Testing | Nest.js | Node |
+						Postgres | SQL
+					</small>
+				</h2>
+	
+				
+				<p class="text-xl mt-4">
+					Sirviendo desde 2019, trabajado tanto de forma independiente como en
+					empresas tecnológicas. Me dedico a crear soluciones sólidas, escalables
+					y seguras, priorizando siempre la calidad del código y la satisfacción
+					del cliente. Integro inteligencia artificial en mis procesos para
+					trabajar de forma más ágil, predecir problemas antes de que ocurran y
+					ofrecer entregas más pulidas, rápidas y optimizadas para buscadores
+					(SEO).
+				</p>
+			</section> -->
+	<!-- <div class="my-4">
+				<a
+					href="https://linkedin.com/in/david-emanuel-espinoza-romero-deerhou"
+					target="_blank"
+					class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-500 hover:text-blue-500
+					transition-colors duration-200 ease-in-out"
+				>
+					<i class="bi bi-linkedin"></i>
+					<span class="sr-only">Ver perfil en LinkedIn</span>
+				</a>
+	
+				<a
+					href="https://facebook.com/deerhou"
+					target="_blank"
+					class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-lg hover:text-blue-600 text-white
+					transition-colors duration-200 ease-in-out"
+				>
+					<i class="bi bi-facebook"></i>
+					<span class="sr-only">Ver perfil en Facebook</span>
+				</a>
+	
+				<a
+					href="mailto:deerhou@gmail.com"
+					class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-lg hover:text-lime-500 text-white
+					transition-colors duration-200 ease-in-out"
+				>
+					<i class="bi bi-envelope"></i>
+					<span class="sr-only">deerhou@gmail.com</span>
+				</a>
+	
+				<a
+					aria-label="Chat on WhatsApp"
+					href="https://wa.me/+5939344904?text=Hola!%20Me%20interesa%20tu%20servicio%20conversemos"
+					class="mx-1 p-2 px-3 inline-grid rounded-full hover:bg-white/10 shadow-lg hover:text-emerald-600 text-white
+					transition-colors duration-200 ease-in-out"
+				>
+					<i class="bi bi-whatsapp"></i>
+					<span class="sr-only">Chat on WhatsApp</span>
+				</a>
+			</div> -->
+	<!-- <a class="whatsappLink mobile" href="whatsapp://send?text=Tu mensaje&phone=+34123456789&abid=+34123456789"></a>
+	<a class="whatsappLink desktop" href="http://web.whatsapp.com/send?text=Tu mensaje&phone=+34123456789&abid=+34123456789"></a> -->
 </Layout>
 
 <style>
