@@ -1,0 +1,28 @@
+---
+import Image from "astro/components/Image.astro";
+
+const {
+  img = "/imgs/main.webp",
+  title = "Jhon Doe",
+  subtitle = "Empresa",
+  description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fugiat, quam hic adipisci veniam aut quidem quaerat, dolorem libero harum dolor expedita. Expedita nulla totam fugiat possimus maiores necessitatibus itaque?",
+} = Astro.props;
+---
+
+<article
+  class="w-100 mr-5 bg-gray-900 hover:bg-gray-800 rounded-lg p-4 mx-30 overflow-visible text-white/90 transition-all
+md:flex md:flex-row sm:items-center sm:gap-6"
+>
+  <Image
+    src={img}
+    alt="logo / picture of client"
+    width="150"
+    height="150"
+    class="outline-8 outline-black aspect-square object-cover rounded-full -mt-20 mx-auto bg-black/80 md:outline-0 md:-mt-0 md:-ml-20 transition-transform duration-300 sm:hover:scale-110"
+  />
+  <div>
+    <header class="text-xl font-bold">{title}</header>
+    <span> {subtitle}</span>
+    <p class="mb-4 mt-2 text-sm">{description}</p>
+  </div>
+</article>
