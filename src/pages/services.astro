@@ -1,13 +1,243 @@
 ---
 import "../styles/styles.css";
 import Layout from "../layouts/Layout.astro";
-import InProcess from "../components/In-Process.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BtnCallToAction from "../components/Btn-call-to-action.astro";
+
+const servicios = [
+  {
+    title: "Diseño Web",
+    description:
+      "Creamos sitios web modernos, rápidos y accesibles, enfocados en usabilidad y experiencia de usuario. Ya sea una landing page o un sistema empresarial, tu presencia online quedará en manos expertas.",
+    img: "/imgs/service (3).webp",
+    client:
+      "Ideal para empresas que necesitan una presencia profesional y eficiente en internet.",
+    features: [
+      "Interfaces responsivas y accesibles.",
+      "Diseño personalizado.",
+      "Optimización SEO.",
+      "Integración con APIs y servicios externos.",
+    ],
+  },
+  {
+    title: "Tiendas Online",
+    description:
+      "Desarrollamos plataformas de e-commerce adaptadas a tus necesidades: catálogo, pagos, seguridad y escalabilidad.",
+    img: "/imgs/service (3).webp",
+    client:
+      "Perfecto para emprendedores, comercios y marcas que desean vender en línea con total control.",
+    features: [
+      "Carrito de compras y gestión de inventario.",
+      "Pasarelas de pago integradas (Stripe, PayPal).",
+      "Panel de administración personalizado.",
+      "Seguridad en transacciones y usuarios.",
+    ],
+  },
+  {
+    title: "Desarrollo Fullstack",
+    description:
+      "Proyectos integrales con frontend y backend conectados eficientemente para garantizar escalabilidad y mantenimiento óptimo.",
+    img: "/imgs/service (3).webp",
+    client:
+      "Ideal para startups y empresas que necesitan soluciones completas y personalizadas.",
+    features: [
+      "Arquitecturas limpias (SCREAM, REST).",
+      "Conexiones con bases de datos relacionales.",
+      "APIs robustas y documentadas.",
+      "Despliegue en entornos productivos.",
+    ],
+  },
+  {
+    title: "Pruebas Automatizadas & QA",
+    description:
+      "Tu software sin errores, siempre. Creamos pruebas unitarias y de integración para asegurar calidad desde el primer despliegue.",
+    img: "/imgs/service (3).webp",
+    client:
+      "Ideal para empresas que necesitan evolucionar tecnológicamente sin detener operaciones.",
+    features: [
+      "Pruebas unitarias con Jest.",
+      "Testing de componentes con Testing-Library.",
+      "Integración en pipelines de CI/CD.",
+    ],
+  },
+  {
+    title: "Desarrollo y Migración de Sistemas Empresariales",
+    description:
+      "Modernizamos tus sistemas internos, migrando tecnologías obsoletas a arquitecturas modernas, sin perder datos ni productividad.",
+    img: "/imgs/service (3).webp",
+    client:
+      "Ideal para empresas que necesitan evolucionar tecnológicamente sin detener operaciones.",
+    features: [
+      "Auditoría de sistemas heredados.",
+      "Refactorización y adaptación progresiva.",
+      "Acompañamiento post-migración.",
+    ],
+  },
+  {
+    title: "Generación de Reportes y Análisis Financiero",
+    description:
+      "Pensado para instituciones que trabajan con grandes volúmenes de datos.",
+    img: "/imgs/service (3).webp",
+    client:
+      "Ideal para empresas que necesitan evolucionar tecnológicamente sin detener operaciones.",
+    features: [
+      "Dashboards visuales.",
+      "Reportes PDF y Excel.",
+      "Análisis comparativos y filtros personalizados.",
+    ],
+  },
+  {
+    title: "Consultoría en Seguridad y Autenticación",
+    description:
+      "Revisamos y reforzamos la seguridad de tus aplicaciones. Desde la autenticación hasta la protección de datos, tu negocio estará blindado.",
+    img: "/imgs/service (3).webp",
+    client:
+      "Dirigido a proyectos donde la integridad y privacidad de los datos es prioritaria.",
+    features: [
+      "Implementación de JWT y Guards.",
+      "Cifrado de datos y prácticas OWASP.",
+      "Validación de acceso por roles y permisos.",
+    ],
+  },
+];
 ---
 
-<Layout title="Services" description="Servicios que ofrecemos en Deer Tech Services">
-  <InProcess />
+<Layout
+  title="Servicios | Soluciones Tecnológicas Integrales, Diseñadas para Potenciar tu Negocio"
+  description="Creamos sitios web modernos, rápidos y accesibles, enfocados en usabilidad y experiencia de usuario. Ya sea una landing page o un sistema empresarial, tu presencia online quedará en manos expertas."
+>
+  <Header />
+  <section class="flex flex-col gap-4 place-items-center md:px-10 md:flex-row">
+    <div class="lg:w-1/2">
+      <h1 class="text-4xl mb-4">
+        Soluciones Tecnológicas Integrales, Diseñadas para Potenciar tu Negocio
+      </h1>
+      <h2 class="text-2xl mb-4">
+        Cada servicio ha sido perfeccionado con años de experiencia y enfoque
+        personalizado.
+      </h2>
+      <div class="">
+        <BtnCallToAction href="#servicios">Ver Servicios</BtnCallToAction>
+        <BtnCallToAction href="/contact">Conversemos</BtnCallToAction>
+      </div>
+    </div>
+    <img
+      src="/imgs/service (3).webp"
+      alt="Servicios"
+      class="object-cover aspect-video rounded-lg lg:w-1/2"
+      width="500"
+      height="500"
+    />
+  </section>
+
+  <main
+    class="gap-4 max-w-7xl mx-auto my-5 px-4 grid md:grid-cols-2 lg:grid-cols-3 "
+  >
+    {
+      servicios.map(({ title, description, img, client, features }) => (
+        <article class="relative pt-50">
+          <img
+            src={img}
+            alt={title}
+            width="200"
+            height="200"
+            class="absolute left-0 right-0 z-0 -mt-20 mx-auto aspect-square rounded-full border border-gray-800 transition-all duration-300 hover:-mt-40 hover:scale-110 "
+          />
+          <div class="relative z-10 bg-gray-800 p-4 rounded-t-xl">
+            <h2 class="text-xl mb-2"> {title}</h2>
+            <p>{description}</p>
+          </div>
+          <ul class="">
+            {features.map((feature, index) => (
+              <li
+                class:list={[`bg-gray-800/${100 - ++index * 20}`]}
+                class="px-4 py-2  hover:bg-gray-800"
+              >
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </main>
+
+  <div class="mx-auto text-center my-10">
+    <h2 class="text-2xl">¿No estás seguro de cuál servicio necesitas?</h2>
+    <BtnCallToAction href="#"> Solicita una asesoría gratuita</BtnCallToAction>
+  </div>
+  <Footer />
 </Layout>
 
+<style>
+  .wrapper {
+    position: relative;
+  }
+
+  .box div {
+    --cube-width: 60px;
+    --cube-border: 6px;
+    --cube-border-color: crimson;
+
+    position: absolute;
+    width: var(--cube-width, 60px);
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: var(--cube-border, 6px) solid var(--cube-border-color, crimson);
+
+    &:nth-child(1) {
+      top: 12%;
+      left: 42%;
+      animation: animatedCube 10s linear infinite;
+    }
+    &:nth-child(2) {
+      top: 17%;
+      left: 6%;
+      animation: animatedCube 9s linear infinite;
+    }
+    &:nth-child(3) {
+      top: 20%;
+      left: 60%;
+      animation: animatedCube 10s linear infinite;
+    }
+    &:nth-child(4) {
+      top: 67%;
+      left: 10%;
+      animation: animatedCube 6s linear infinite;
+    }
+    &:nth-child(5) {
+      top: 80%;
+      left: 70%;
+      animation: animatedCube 12s linear infinite;
+    }
+    &:nth-child(6) {
+      top: 60%;
+      left: 80%;
+      animation: animatedCube 15s linear infinite;
+    }
+    &:nth-child(7) {
+      top: 32%;
+      left: 25%;
+      animation: animatedCube 16s linear infinite;
+    }
+    &:nth-child(8) {
+      top: 90%;
+      left: 25%;
+      animation: animatedCube 9s linear infinite;
+    }
+    &:nth-child(9) {
+      top: 20%;
+      left: 80%;
+      animation: animatedCube 5s linear infinite;
+    }
+    &:nth-child(10) {
+      top: 70%;
+      left: 50%;
+      animation: animatedCube 7s linear infinite;
+    }
+  }
+</style>
 <!-- Desarrollo Web
 Tiendas Online
 Aplicaciones de Escritorio
