@@ -2,8 +2,147 @@
 import "../styles/styles.css";
 import Layout from "../layouts/Layout.astro";
 import InProcess from "../components/In-Process.astro";
+import BtnCallToAction from "../components/Btn-call-to-action.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Contact" description="Página de contacto con formulario para enviar un mensaje">
-  <InProcess />
+<Layout
+  title="Contact"
+  description="Página de contacto con formulario para enviar un mensaje, ya sea por email o WhatsApp"
+>
+  <Header />
+  <div class="mx-auto text-center my-5">
+    <h1 class="text-xl">Estamos listos para escucharte</h1>
+    <h2 class="text-lg">
+      Tu proyecto merece atención personalizada y soluciones reales.
+    </h2>
+  </div>
+
+  <div
+    class="max-w-md mx-auto my-10 p-2 rounded-xl bg-gray-800 shadow-sm shadow-gray-800"
+  >
+    <form
+      id="contactForm"
+      class="p-4 rounded-lg bg-linear-60 to-gray-900/90 from-gray-950/90 shadow-sm shadow-gray-800"
+    >
+      <h3 class="mb-6 text-lg">
+        Envíanos un mensaje y nos pondremos en contacto contigo en menos de 24
+        horas.
+      </h3>
+      <div class="mb-4">
+        <label>
+          Nombre * <br />
+          <input
+            class="rounded-sm w-full bg-gray-800 outline outline-white/8"
+            type="text"
+            name="name"
+            required
+          />
+        </label>
+      </div>
+
+      <div class="mb-4">
+        <label>
+          Email * <br />
+          <input
+            class="rounded-sm w-full bg-gray-800 outline outline-white/8"
+            type="email"
+            name="email"
+            required
+          />
+        </label>
+      </div>
+
+      <div class="mb-4">
+        <label>
+          Mensaje * <br />
+          <textarea
+            id="message"
+            class="rounded-sm w-full bg-gray-800 outline outline-white/8"
+            rows="4"
+            cols="50"
+            required></textarea>
+        </label>
+      </div>
+
+      <div class="mx-auto text-center my-4">
+        <button
+          id="btnWhatsapp"
+          type="button"
+          class="px-4 py-2 mr-4 bg-linear-to-r to-blue-600 from-indigo-600 rounded-2xl shadow
+animate-pulse hover:animate-none"
+        >
+          Enviar por WhatsApp</button
+        >
+        <button
+          id="btnEmail"
+          type="button"
+          class="px-4 py-2 bg-linear-to-r to-blue-600 from-indigo-600 rounded-2xl shadow
+animate-pulse hover:animate-none"
+          >Enviar por Email</button
+        >
+      </div>
+    </form>
+  </div>
+
+  <div class="mx-auto text-center my-10">
+    <h2 class="text-2xl">
+      ¿Tienes una idea o un problema técnico y no sabes por dónde empezar?
+      Agenda una asesoría gratuita y descubre cómo podemos ayudarte.
+    </h2>
+    <BtnCallToAction href="#"> Solicita una asesoría</BtnCallToAction>
+  </div>
+  <Footer />
 </Layout>
+
+<script>
+  const name = document.getElementById("name")!;
+  const email = document.getElementById("email")!;
+  const message = document.getElementById("message")!;
+
+  const btnWhatsapp = document.getElementById("btnWhatsapp")!;
+  const btnEmail = document.getElementById("btnEmail")!;
+  btnWhatsapp.addEventListener("click", sendWhatsApp);
+  btnEmail.addEventListener("click", sendEmail);
+
+  function getFormData() {
+    let data = {
+      name: "",
+      email: "",
+      message: "",
+    };
+    // instanceof HTMLInputElement
+    if (
+      name instanceof HTMLInputElement &&
+      email instanceof HTMLInputElement &&
+      message instanceof HTMLTextAreaElement
+    ) {
+      data = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        message: message.value.trim(),
+      };
+    }
+    return data;
+  }
+
+  function sendWhatsApp() {
+    const { name, email, message } = getFormData();
+
+    const whatsappMessage = `Hola, soy ${name} (${email}). ${message}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    console.log(encodedMessage);
+
+    window.open(`https://wa.me/+593939384904?text=${encodedMessage}`, "_blank");
+  }
+
+  function sendEmail() {
+    const { name, email, message } = getFormData();
+
+    const subject = `Mensaje de ${name}`;
+    const body = `Email: ${email}\n\nMensaje: ${message}`;
+
+    window.location.href = `mailto:deerhou@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+</script>
