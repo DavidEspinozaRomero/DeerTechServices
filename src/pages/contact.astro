@@ -1,7 +1,6 @@
 ---
 import "../styles/styles.css";
 import Layout from "../layouts/Layout.astro";
-import InProcess from "../components/In-Process.astro";
 import BtnCallToAction from "../components/Btn-call-to-action.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -36,6 +35,7 @@ import Footer from "../components/Footer.astro";
           <input
             class="rounded-sm w-full bg-gray-800 outline outline-white/8"
             type="text"
+            id="name"
             name="name"
             required
           />
@@ -48,6 +48,7 @@ import Footer from "../components/Footer.astro";
           <input
             class="rounded-sm w-full bg-gray-800 outline outline-white/8"
             type="email"
+            id="email"
             name="email"
             required
           />
@@ -70,17 +71,17 @@ import Footer from "../components/Footer.astro";
         <button
           id="btnWhatsapp"
           type="button"
-          class="px-4 py-2 mr-4 bg-linear-to-r to-blue-600 from-indigo-600 rounded-2xl shadow
+          class="px-4 py-2 mr-4 bg-linear-to-r to-blue-600 cursor-pointer from-indigo-600 rounded-2xl shadow
 animate-pulse hover:animate-none"
         >
-          Enviar por WhatsApp</button
+          Enviar WhatsApp</button
         >
         <button
           id="btnEmail"
           type="button"
-          class="px-4 py-2 bg-linear-to-r to-blue-600 from-indigo-600 rounded-2xl shadow
+          class="px-4 py-2 bg-linear-to-r to-blue-600 cursor-pointer from-indigo-600 rounded-2xl shadow
 animate-pulse hover:animate-none"
-          >Enviar por Email</button
+          >Enviar Email</button
         >
       </div>
     </form>
@@ -91,16 +92,19 @@ animate-pulse hover:animate-none"
       ¿Tienes una idea o un problema técnico y no sabes por dónde empezar?
       Agenda una asesoría gratuita y descubre cómo podemos ayudarte.
     </h2>
-    <BtnCallToAction href="#"> Solicita una asesoría</BtnCallToAction>
+    <BtnCallToAction href="https://calendly.com/deerhou/30min"> Solicita una asesoría</BtnCallToAction>
   </div>
   <Footer />
 </Layout>
 
-<script>
-  const name = document.getElementById("name")!;
-  const email = document.getElementById("email")!;
-  const message = document.getElementById("message")!;
-
+<script >
+  const inputName = document.getElementById("name")!;
+  const inputEmail = document.getElementById("email")!;
+  const inputMessage = document.getElementById("message")!;
+  console.log(inputName,
+inputEmail,
+inputMessage);
+  
   const btnWhatsapp = document.getElementById("btnWhatsapp")!;
   const btnEmail = document.getElementById("btnEmail")!;
   btnWhatsapp.addEventListener("click", sendWhatsApp);
@@ -114,14 +118,14 @@ animate-pulse hover:animate-none"
     };
     // instanceof HTMLInputElement
     if (
-      name instanceof HTMLInputElement &&
-      email instanceof HTMLInputElement &&
-      message instanceof HTMLTextAreaElement
+      inputName instanceof HTMLInputElement &&
+      inputEmail instanceof HTMLInputElement &&
+      inputMessage instanceof HTMLTextAreaElement
     ) {
       data = {
-        name: name.value.trim(),
-        email: email.value.trim(),
-        message: message.value.trim(),
+        name: inputName.value.trim(),
+        email: inputEmail.value.trim(),
+        message: inputMessage.value.trim(),
       };
     }
     return data;
@@ -129,7 +133,7 @@ animate-pulse hover:animate-none"
 
   function sendWhatsApp() {
     const { name, email, message } = getFormData();
-
+    
     const whatsappMessage = `Hola, soy ${name} (${email}). ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
     console.log(encodedMessage);
@@ -142,7 +146,6 @@ animate-pulse hover:animate-none"
 
     const subject = `Mensaje de ${name}`;
     const body = `Email: ${email}\n\nMensaje: ${message}`;
-
     window.location.href = `mailto:deerhou@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 </script>
