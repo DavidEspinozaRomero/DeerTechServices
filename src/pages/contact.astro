@@ -92,19 +92,18 @@ animate-pulse hover:animate-none"
       ¿Tienes una idea o un problema técnico y no sabes por dónde empezar?
       Agenda una asesoría gratuita y descubre cómo podemos ayudarte.
     </h2>
-    <BtnCallToAction href="https://calendly.com/deerhou/30min"> Solicita una asesoría</BtnCallToAction>
+    <BtnCallToAction href="https://calendly.com/deerhou/30min">
+      Solicita una asesoría</BtnCallToAction
+    >
   </div>
   <Footer />
 </Layout>
 
-<script >
+<script>
   const inputName = document.getElementById("name")!;
   const inputEmail = document.getElementById("email")!;
   const inputMessage = document.getElementById("message")!;
-  console.log(inputName,
-inputEmail,
-inputMessage);
-  
+
   const btnWhatsapp = document.getElementById("btnWhatsapp")!;
   const btnEmail = document.getElementById("btnEmail")!;
   btnWhatsapp.addEventListener("click", sendWhatsApp);
@@ -133,11 +132,9 @@ inputMessage);
 
   function sendWhatsApp() {
     const { name, email, message } = getFormData();
-    
+
     const whatsappMessage = `Hola, soy ${name} (${email}). ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    console.log(encodedMessage);
-
     window.open(`https://wa.me/+593939384904?text=${encodedMessage}`, "_blank");
   }
 
