@@ -1,33 +1,24 @@
 ---
 let {
-  title = "Desarrollo Web y Servicios Tecnológicos | Deer Tech Services",
-  description = "Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida.",
-  image = "https://deertechservices.netlify.app/heroWeb.webp",
-  OGTitle = "",
-  OGDescription = "",
-  OGImage = "",
+  OGTitle = "Desarrollo Web y Servicios Tecnológicos | Deer Tech Services",
+  OGDescription = "Desarrollo frontend y fullstack, pruebas automatizadas, migración de sistemas empresariales y consultoría en seguridad. Soluciones tecnológicas a tu medida.",
+  OGImage = "https://deertechservices.top/imgs/main.webp",
 } = Astro.props;
 ---
 
 <!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://deertechservices.netlify.com" />
+<meta property="og:url" content="https://deertechservices.top" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content={OGTitle ?? title} />
-<meta property="og:description" content={OGDescription ?? description} />
-<meta
-  property="og:image"
-  content="https://deertechservices.netlify.app/heroWeb.webp"
-/>
+<meta property="og:title" content={OGTitle} />
+<meta property="og:description" content={OGDescription} />
+<meta property="og:image" content={OGImage} />
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:domain" content="deertechservices.netlify.com" />
-<meta property="twitter:url" content="https://deertechservices.netlify.com" />
-<meta name="twitter:title" content={OGTitle ?? title} />
-<meta name="twitter:description" content={OGDescription ?? description} />
-<meta
-  name="twitter:image"
-  content="https://deertechservices.netlify.app/heroWeb.webp"
-/>
+<meta property="twitter:domain" content="deertechservices.top" />
+<meta property="twitter:url" content="https://deertechservices.top" />
+<meta name="twitter:title" content={OGTitle} />
+<meta name="twitter:description" content={OGDescription} />
+<meta name="twitter:image" content={OGImage} />
 <meta name="twitter:site" content="@DEERHOU" />
 <meta name="twitter:creator" content="@DEERHOU" />
