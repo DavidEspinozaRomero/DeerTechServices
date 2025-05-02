@@ -3,7 +3,8 @@ import AsideNav from "../components/Aside-Nav.astro";
 import Head from "../components/Head.astro";
 import OpenGraph from "../components/OpenGraph.astro";
 
-const { title, description, image } = Astro.props;
+const { title, description, image, OGTitle, OGDescription, OGImage } =
+	Astro.props;
 ---
 
 <!doctype html>
@@ -38,7 +39,13 @@ const { title, description, image } = Astro.props;
 		<meta name="robots" content="index,follow" />
 		<!-- Evrything else (SEO, meta tags, icons, OpenGraph, etc) -->
 		<Head />
-		<OpenGraph title={title} description={description} image={image} />
+		<OpenGraph
+			OGTitle={OGTitle ?? title}
+			,
+			OGDescription={OGDescription ?? description}
+			,
+			OGImage={OGImage ?? image}
+		/>
 	</head>
 	<body class="bg-neutral-950 text-slate-200">
 		<AsideNav />
