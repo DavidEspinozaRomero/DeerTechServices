@@ -1,9 +1,128 @@
 ---
 import "../styles/styles.css";
 import Layout from "../layouts/Layout.astro";
-import InProcess from "../components/In-Process.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="About" description="Nosotros somos una empresa tecnológica dedicada a desarrollar soluciones tecnológicas a tu medida.">
-  <InProcess />
+<Layout
+  title="About"
+  description="Nosotros somos una empresa tecnológica dedicada a desarrollar soluciones tecnológicas a tu medida."
+>
+  <Header />
+
+  <main class="max-w-4xl mx-auto mt-10 px-4 py-8">
+    <h1 class="text-4xl font-bold text-center mb-6">
+      Somos tecnología con rostro humano
+    </h1>
+
+    <h2 class="text-2xl text-center mb-12">
+      En DeerTechServices combinamos experiencia, pasión y compromiso para
+      ofrecer soluciones que marcan la diferencia.
+    </h2>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">🎯 Nuestra Misión</h3>
+      <p class="">
+        Ofrecer servicios tecnológicos personalizados que optimicen la operación
+        y crecimiento de negocios a través del desarrollo de software moderno,
+        seguro y eficaz.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">👁 Nuestra Visión</h3>
+      <p class="">
+        Convertirnos en el socio tecnológico confiable de empresas emergentes y
+        consolidadas, destacando por la excelencia técnica y la atención
+        personalizada.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4"></h3>
+      <p class=""></p>
+    </section>
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">
+        ⚙️ ¡Construir aplicaciones digitales es la mejor forma de cambiar el
+        mundo para mejorarlo!
+      </h3>
+      <div class="bg-gray-800 p-6 rounded-lg">
+        <p class="mb-4">
+          Soy desarrollador de software y me especializo en crear aplicaciones
+          que no solo se vean bien, sino que también sean funcionales y fáciles
+          de usar.
+        </p>
+        <p class="mb-4">
+          Todos nos hemos encontrado con aplicaciones que son confusas y
+          complicadas de usar. Esa mala experiencia de usuario, aleja a los
+          clientes. Es por eso que me dedico a colaborar con equipos
+          multidisciplinarios, comunicándome efectivamente para comprender las
+          necesidades del usuario y traducirlas en soluciones técnicas. <br />
+        </p>
+        <p class="mb-4">
+          Sirviendo desde 2019, trabajado tanto de forma independiente como en
+          empresas tecnológicas. Me dedico a crear soluciones sólidas,
+          escalables y seguras, priorizando siempre la calidad del código y la
+          satisfacción del cliente.
+        </p>
+        <p class="mb-4">
+          Integro inteligencia artificial en mis procesos para trabajar de forma
+          más ágil, predecir problemas antes de que ocurran y ofrecer entregas
+          más pulidas, rápidas y optimizadas para buscadores (SEO).
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">
+        💡 ¿Por qué nació DeerTechServices?
+      </h3>
+      <blockquote class="bg-gray-800 p-6 rounded-lg italic">
+        "Creé DeerTechServices porque vi una oportunidad para brindar un
+        servicio diferente: personalizado, cercano y con soluciones reales, no
+        genéricas. Mi objetivo es que cada cliente sepa que su proyecto es tan
+        importante para mí como lo es para ellos."
+        <footer class="mt-4 font-semibold">— David Espinoza</footer>
+      </blockquote>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">🤝 Nuestros valores</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Transparencia</h4>
+          <p class="">Comunicación clara y honesta en cada etapa.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Compromiso</h4>
+          <p class="">Cumplimos lo que prometemos, sin excusas.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Excelencia Técnica</h4>
+          <p class="">Código limpio, escalable y bien probado.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Empatía</h4>
+          <p class="">
+            Escuchamos y comprendemos tu contexto antes de proponer soluciones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-center">
+      <h3 class="text-2xl font-semibold mb-4">
+        ¿Quieres trabajar con alguien que entienda tu visión?
+      </h3>
+      <a
+        href="/contact"
+        class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        👉 Conversemos sobre tu proyecto →
+      </a>
+    </section>
+  </main>
+  <Footer />
 </Layout>
