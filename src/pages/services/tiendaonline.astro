@@ -1,0 +1,185 @@
+---
+import "../../styles/styles.css";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+title="Tienda Online | Deer Tech Services"
+description="Diseñamos y desarrollamos tiendas en linea seguras, rápidas y 100% adaptadas a tu negocio"
+>
+  <Header />
+  <main class="container mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 ">
+        Vende más, vende mejor con tu tienda online personalizada
+      </h1>
+      <h2 class="text-xl md:text-2xl  mb-8">
+        Diseñamos y desarrollamos tiendas virtuales seguras, rápidas y 100% adaptadas a tu negocio.
+      </h2>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="mb-16 max-w-2xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6 ">
+        <span class="text-2xl mr-2">💡</span> ¿Por qué una tienda online con DeerTechServices?
+      </h2>
+      <p class=" leading-relaxed">
+        Hoy no basta con tener una web bonita: necesitas una tienda online funcional, optimizada para convertir visitas en ventas. En DeerTechServices, creamos plataformas de e-commerce pensadas para escalar, con foco en experiencia de usuario, seguridad y rendimiento.
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6  flex items-center">
+        <span class="text-2xl mr-2">⚙️</span> ¿Qué incluye nuestro servicio?
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Diseño personalizado: No usamos plantillas genéricas. Tu tienda se verá única y profesional.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Catálogo administrable: Agrega, edita o elimina productos fácilmente desde un panel intuitivo.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Pasarelas de pago integradas: Stripe, PayPal, transferencias y métodos locales.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Optimización SEO y velocidad: Para que Google te encuentre y tus clientes no esperen.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Gestión de inventario, pedidos y clientes</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Responsive design: Se adapta perfectamente a móviles, tablets y PC.</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Seguridad y protección de datos: Certificados SSL y buenas prácticas de autenticación.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ideal For Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6  flex items-center">
+        <span class="text-2xl mr-2">🚀</span> Ideal para:
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="text-blue-500 mr-2">•</span>
+            <span>Emprendedores que quieren comenzar a vender en línea</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-500 mr-2">•</span>
+            <span>Negocios físicos que buscan digitalizar su operación</span>
+          </li>
+        </ul>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="text-blue-500 mr-2">•</span>
+            <span>Marcas que necesitan escalar con una tienda profesional</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-500 mr-2">•</span>
+            <span>Proyectos que requieren funcionalidades especiales</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6  flex items-center">
+        <span class="text-2xl mr-2">🛠️</span> Tecnologías que usamos
+      </h2>
+      <p class="mb-4"> Si tienes ya una tienda online con otras tecnologías, no te preocupes. <wbr> Nos adaptamos a tus necesidades</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-semibold mb-4">Frontend</h3>
+          <p class="">Astro, Figma</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-semibold mb-4">Backend</h3>
+          <p class="">Nest.js, Express</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-semibold mb-4">Base de Datos</h3>
+          <p class="">SQL, PostgreSQL</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-semibold mb-4">E-commerce & Seguridad</h3>
+          <p class="">APIs personalizadas, Shopify/WooCommerce, JWT, Guards, OWASP</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6  flex items-center">
+        <span class="text-2xl mr-2">📦</span> Proceso de trabajo
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="text-purple-500 mr-2">1.</span>
+            <span>Análisis de tu negocio y objetivos de venta</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-purple-500 mr-2">2.</span>
+            <span>Diseño UX/UI personalizado</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-purple-500 mr-2">3.</span>
+            <span>Desarrollo ágil y validación contigo en cada fase</span>
+          </li>
+        </ul>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="text-purple-500 mr-2">4.</span>
+            <span>Pruebas, lanzamiento y capacitación</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-purple-500 mr-2">5.</span>
+            <span>Soporte post-implementación para que no te sientas solo</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="text-center bg-gray-800 p-8 rounded-lg">
+      <h2 class="text-2xl font-bold mb-4 ">
+        🎯 Haz crecer tu negocio con una tienda online diseñada para vender
+      </h2>
+      <p class=" mb-6 mx-auto">
+        ¿No sabes por dónde empezar? No te preocupes. David te guiará paso a paso con una asesoría técnica y comercial enfocada en qué necesita tu tienda para vender desde el primer día.
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+      >
+        Agenda tu asesoría gratuita ahora →
+      </a>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
