@@ -1,36 +1,38 @@
 ---
 import LinkBtn from "./Link-btn.astro";
+
+import { calendly30min, whatsapp, email, facebook, linkedin } from "../assets/data/links";
 ---
 
 <aside class="sticky z-10 top-1/4 bottom-0 right-2 ml-auto w-10">
   <div class="absolute flex flex-col gap-4 h-80">
     <LinkBtn
-      href="https://calendly.com/deerhou/30min"
+      href={calendly30min}
       icon="bi bi-calendar2-check-fill"
       hoverColor="group-hover:text-blue-600"
       tooltip="Agendamento"
     />
     <LinkBtn
-      href="https://wa.me/+593939384904?text=Hola!%20Me%20interesa%20tu%20servicio%20conversemos"
+      href={whatsapp}
       icon="bi bi-whatsapp"
       hoverColor="group-hover:text-emerald-600"
       tooltip="Conversemos"
     />
 
     <LinkBtn
-      href="mailto:deerhou@gmail.com?subject=Servicios%20TI&body=Hola%20David,\n\nNecesito%20conversar%20tomamos%20un%20café"
+      href={email}
       icon="bi bi-envelope-fill"
       hoverColor="group-hover:text-indigo-500"
       tooltip="Email"
     />
     <LinkBtn
-      href="https://www.facebook.com/people/DEER-Tech-Services/100063722725316/"
+      href={facebook}
       icon="bi bi-facebook"
       hoverColor="group-hover:text-blue-600"
       tooltip="Facebook Page"
     />
     <LinkBtn
-      href="https://linkedin.com/in/david-emanuel-espinoza-romero-deerhou"
+      href={linkedin}
       icon="bi bi-linkedin"
       hoverColor="group-hover:text-blue-500"
       tooltip="LinkedIn"
