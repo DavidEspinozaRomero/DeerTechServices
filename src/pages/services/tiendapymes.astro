@@ -1,0 +1,163 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+
+import { calendly30min } from "../../assets/data/links";
+const title =
+  "Desarrolla tu Tienda Online Profesional para PYMEs | DeerTechServices";
+const description =
+  "Impulsa tus ventas con una tienda online personalizada para PYMEs. Servicio 100% a medida con asesoría de David. Agenda tu consultoría gratuita de 30 min.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+      Crea tu Tienda Online Profesional para PYMEs
+    </h1>
+
+    <a
+      href={calendly30min}
+      class="bg-blue-600 hover:bg-blue-700 font-semibold inline-block py-3 px-6 rounded-lg transition-colors mb-12"
+    >
+      Agendar mi consultoría gratuita (30 min)
+    </a>
+
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">
+        ¿Por qué tu PYME necesita una tienda online?
+      </h2>
+      <p class="leading-relaxed">
+        En la era digital actual, una tienda online es fundamental para el
+        crecimiento de tu PYME. Permite expandir tu alcance, aumentar ventas y
+        adaptarte a las tendencias actuales del comercio electrónico.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">
+        Nuestro servicio de e-commerce personalizado
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-3">
+            Atención exclusiva de David
+          </h3>
+          <p class="">
+            Servicio personalizado con contacto directo, comunicación empática y
+            confiable.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Metodología ágil</h3>
+          <p class="">
+            Proceso estructurado en fases: descubrimiento, diseño, desarrollo,
+            pruebas y lanzamiento. Enfoque en UX/UI y SEO técnico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">
+        Características destacadas
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">
+            Diseño responsive y UX optimizado
+          </h3>
+          <p class="">
+            Sitio accesible en menos de 4 clics, compatible con todos los
+            dispositivos.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">
+            Gestión de productos y pasarelas de pago seguras
+          </h3>
+          <p class="">
+            Soluciones a medida con seguridad PCI-DSS. Integración con Stripe,
+            PayPal y métodos locales.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">
+            Optimización SEO y velocidad de carga
+          </h3>
+          <p class="">
+            Implementación de mejores prácticas SEO y optimización de
+            rendimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-gray-800 p-8 rounded-lg text-center mb-12">
+      <h2 class="text-2xl font-bold mb-4">Comienza tu tienda online hoy</h2>
+      <a
+        href={calendly30min}
+        class="bg-blue-600 hover:bg-blue-700 font-semibold inline-block py-3 px-6 rounded-lg transition-colors"
+      >
+        Agendar consultoría
+      </a>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">
+        Tarifas y plan de acción
+      </h2>
+      <p class="mb-6">
+        Ofrecemos un modelo de precios transparente con paquetes adaptados a
+        cada necesidad. Consulta nuestras opciones de financiación y descuentos
+        por volumen.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Preguntas frecuentes</h2>
+      <div class="space-y-4">
+        <div class="border-b border-gray-200 pb-4">
+          <h3 class="text-lg font-semibold mb-2">
+            ¿Cómo agendo mi video llamada de consultoría?
+          </h3>
+          <p class="">
+            Puedes agendar tu consultoría gratuita o a través de nuestro
+            formulario de contacto.
+            <a href={calendly30min} class="underline text-blue-400 mr-4"
+              >Agendar mi consultoría gratuita (30 min)</a
+            >
+            <a href="http://deertechservice.top/contacto" class="underline text-blue-400"
+              >Contacto</a
+            >
+          </p>
+        </div>
+        <div class="border-b border-gray-200 pb-4">
+          <h3 class="text-lg font-semibold mb-2">
+            ¿Cuánto tiempo tarda el desarrollo?
+          </h3>
+          <p class="">
+            El tiempo de desarrollo varía según la complejidad del proyecto lo
+            mejor es charlar y ver cuánto tiempo tomará tu proyecto.
+          </p>
+        </div>
+        <div class="border-b border-gray-200 pb-4">
+          <h3 class="text-lg font-semibold mb-2">
+            ¿Qué soporte post-lanzamiento ofrecen?
+          </h3>
+          <p class="">
+            Ofrecemos soporte técnico y mantenimiento continuo para asegurar el
+            funcionamiento óptimo.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
